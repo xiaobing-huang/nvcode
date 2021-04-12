@@ -26,6 +26,14 @@ return require('packer').startup(function(use)
     -- Quality of life improvements
     -- use 'norcalli/nvim_utils'
 
+	-- Utility
+    use {
+        'glacambre/firenvim',
+        run = function()
+            vim.fn['firenvim#install'](1)
+        end
+    }
+
     -- LSP
     use 'neovim/nvim-lspconfig'
     use 'glepnir/lspsaga.nvim'
@@ -91,12 +99,6 @@ return require('packer').startup(function(use)
     -- use 'gennaro-tedesco/nvim-jqx'
     -- use 'turbio/bracey.vim'
 
-    -- Php
-    use 'phpactor/phpactor'
-
-    -- Flutter
-    use 'thosakwe/vim-flutter'
-
     -- Dependency assistent
     use 'akinsho/dependency-assist.nvim'
 
@@ -124,6 +126,7 @@ return require('packer').startup(function(use)
     use 'windwp/nvim-autopairs'
     use 'mbbill/undotree'
 	use 'nacro90/numb.nvim'
+	use 'junegunn/vim-easy-align'
 
     -- Database
     use 'tpope/vim-dadbod'
@@ -166,7 +169,7 @@ return require('packer').startup(function(use)
     -- use 'cohama/lexima.vim'
     -- use 'bfredl/nvim-miniyank'
     -- use 'brooth/far.vim'
-    -- use 'liuchengxu/vista.vim'
+    -- use 'liuchengxu/vista.vijunegunn/vim-easy-alignm'
     -- use 'psliwka/vim-smoothie'
     -- use 'nvim-treesitter/nvim-treesitter-refactor'
     -- use 'nvim-treesitter/playground'

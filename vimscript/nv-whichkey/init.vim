@@ -1,7 +1,7 @@
 " Leader Key Maps
 
 " Timeout
-let g:which_key_timeout = 100
+let g:which_key_timeout = 500
 
 let g:which_key_display_names = {'<CR>': '↵', '<TAB>': '⇆', " ": 'SPC'}
 
@@ -82,7 +82,7 @@ let g:which_key_map.b = {
       \ 'name' : '+buffer' ,
       \ '>' : [':BufferMoveNext'        , 'move next'],
       \ '<' : [':BufferMovePrevious'    , 'move prev'],
-      \ 'b' : [':BufferPick'            , 'pick buffer'],
+      \ 'b' : [':Telescope buffers'            , 'pick buffer'],
       \ 'd' : [':BufferClose'               , 'delete-buffer'],
       \ 'n' : ['bnext'                  , 'next-buffer'],
       \ 'p' : ['bprevious'              , 'previous-buffer'],
@@ -101,6 +101,11 @@ let g:which_key_map.d = {
       \ }
       " \ 'O' : ['DebugStepOut'                  , 'next-buffer'],
       " \ 'S' : ['DebugGetSession '              , 'fzf-buffer'],
+
+let g:which_key_map.f = {
+			\ 'name': '+Find',
+			\ 'f' : [':Telescope find_files', 'Find files'],
+			\ }
 
 " D is for database
 let g:which_key_map.D = {
@@ -215,6 +220,11 @@ let g:which_key_map.l = {
       \ }
       " \ 'H' : [':Lspsaga signature_help'             , 'signature_help'],
       " \ 'o' : [':Vista!!'                            , 'outline'],
+
+let g:which_key_map.o = {
+			\ 'name' : '+open',
+			\ 'p' : [':NvimTreeToggle', 'Toggle Nvim Tree']
+			\ }
 
 " t is for terminal
 let g:which_key_map.t = {
